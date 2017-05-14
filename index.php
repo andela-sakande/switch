@@ -1,3 +1,3 @@
 <?php
 
-include('teat.php');
+include('test.php');
