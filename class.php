@@ -6,12 +6,18 @@ class HumanBeing
 
     private $brain;
 
+    public function __construct($headSize, $brainCapacity)
+    {
+        $this->setHead($headSize);
+        $this->setBrain($brainCapacity);
+    }
+
     public function setHead($headSize)
     {
         $this->head = $headSize;
     }
 
-    public function getHead()
+    final public function getHead()
     {
         return $this->head;
     }
@@ -21,18 +27,25 @@ class HumanBeing
         $this->brain = $brainCapacity;
     }
 
-    public function getBrain()
+    private function getBrain()
     {
         return $this->brain;
     }
 }
 
-$human = new HumanBeing();
-$human->setHead('Big Head');
-echo $human->getHead();
+$human = new HumanBeing("Giant Head", "low");
+$human->getBrain();
+var_dump($human);
 
-$human2 = new HumanBeing();
-$human2->setHead('Small Head');
-$human2 ->setBrain('low');
-echo $human2->getHead();
-echo $human2->getBrain();
+// class Man extends HumanBeing
+// {
+//     public function getHead()
+//     {
+//         return "Headless";
+//     }
+// }
+
+// $man = new Man();
+// $man->setBrain('Watery Brain');
+// echo $man->getHead();
+// var_dump($man);
