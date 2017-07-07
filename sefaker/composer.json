@@ -1,0 +1,7 @@
+{
+    "require": {
+        "fzaninotto/faker": "^1.6",
+        "phpunit/phpunit": "^6.2",
+        "squizlabs/php_codesniffer": "^3.0"
+    }
+}
